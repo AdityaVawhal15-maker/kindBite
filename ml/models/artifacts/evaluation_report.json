@@ -1,0 +1,48 @@
+{
+  "status": "success",
+  "test_samples": 2446,
+  "demand_model": {
+    "algorithm": "RandomForestRegressor",
+    "test_mae_kg": 1.207,
+    "test_rmse_kg": 1.655,
+    "test_r2": 0.9589,
+    "test_mape_pct": 7.03
+  },
+  "surplus_model": {
+    "algorithm": "GradientBoostingRegressor",
+    "test_mae_kg": 1.122,
+    "test_rmse_kg": 1.498,
+    "test_r2": 0.507
+  },
+  "waste_risk_classifier": {
+    "algorithm": "RandomForestClassifier",
+    "test_accuracy": 0.7212,
+    "test_macro_f1": 0.4769,
+    "test_macro_precision": 0.4725,
+    "test_macro_recall": 0.4818,
+    "confusion_matrix": {
+      "labels": [
+        "LOW",
+        "MEDIUM",
+        "HIGH"
+      ],
+      "matrix": [
+        [
+          1118,
+          336,
+          0
+        ],
+        [
+          309,
+          646,
+          0
+        ],
+        [
+          2,
+          35,
+          0
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "kindbite",
+  "version": "0.1.0",
+  "description": "KindBite — AI-powered food waste prediction and redistribution platform",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently --names \"BACKEND,FRONTEND\" --prefix-colors \"magenta,cyan\" \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && npm run dev 2>/dev/null || bash ../scripts/start_backend.sh",
+    "setup": "bash scripts/setup.sh",
+    "db:migrate": "bash scripts/db_migrate.sh",
+    "db:seed": "bash scripts/db_seed.sh",
+    "db:reset": "bash scripts/db_reset.sh",
+    "ml:generate": "bash scripts/ml_generate.sh",
+    "ml:train": "bash scripts/ml_train.sh",
+    "test:backend": "bash scripts/test_backend.sh",
+    "test:frontend": "cd frontend && npm run test",
+    "test:e2e": "cd frontend && npx playwright test",
+    "test:all": "npm run test:backend && npm run test:frontend",
+    "build": "cd frontend && npm run build",
+    "install:all": "npm install && cd frontend && npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "dataset_name": "KindBite Mumbai Restaurant Demand & Surplus Dataset",
+  "description": "High-fidelity synthetic dataset modeled after Mumbai restaurant footfalls, monsoon anomalies, religious festivals, and prep buffer waste behaviors.",
+  "record_count": 24455,
+  "date_range": [
+    "2025-01-01",
+    "2025-12-31"
+  ],
+  "features": [
+    "date",
+    "day_of_week",
+    "is_weekend",
+    "month",
+    "restaurant_id",
+    "restaurant_type",
+    "locality",
+    "pincode",
+    "food_item_id",
+    "food_name",
+    "food_category",
+    "dietary_label",
+    "shelf_life_hours",
+    "price_inr",
+    "weather_condition",
+    "temperature_celsius",
+    "humidity_percent",
+    "precipitation_mm",
+    "festival_event",
+    "festival_multiplier",
+    "prepared_quantity_kg",
+    "actual_demand_kg",
+    "surplus_quantity_kg",
+    "surplus_percentage",
+    "waste_risk"
+  ],
+  "restaurants_count": 5,
+  "food_items_count": 15,
+  "generator_seed": 42
+}

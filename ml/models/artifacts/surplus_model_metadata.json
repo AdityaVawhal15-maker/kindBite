@@ -1,0 +1,12 @@
+{
+  "model_name": "surplus_predictor",
+  "algorithm": "GradientBoostingRegressor",
+  "version": "1.0.0",
+  "train_samples": 19564,
+  "validation_samples": 2445,
+  "metrics": {
+    "mae_kg": 1.1,
+    "rmse_kg": 1.493,
+    "r2_score": 0.5427
+  }
+}

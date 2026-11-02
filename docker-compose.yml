@@ -1,0 +1,25 @@
+version: "3.9"
+
+services:
+  # ── PostgreSQL Database ────────────────────────────────────
+  db:
+    image: postgis/postgis:16-3.4-alpine
+    container_name: kindbite_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: kindbite
+      POSTGRES_USER: kindbite
+      POSTGRES_PASSWORD: kindbite_dev_pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U kindbite -d kindbite"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  pgdata:
+    driver: local

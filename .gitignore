@@ -1,0 +1,92 @@
+# ============================================================
+# KindBite — .gitignore
+# ============================================================
+
+# Node / Frontend
+node_modules/
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/.env
+frontend/.env.local
+frontend/.env.production
+*.tsbuildinfo
+
+# Python / Backend
+backend/__pycache__/
+backend/**/__pycache__/
+**/__pycache__/
+*.py[cod]
+*.pyo
+backend/.venv/
+ml/.venv/
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+frontend/dist/
+
+# Environment files — NEVER commit
+.env
+.env.local
+.env.production
+.env.staging
+backend/.env
+ml/.env
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+*.dump
+
+# ML Model artifacts (large binary files — use training scripts to regenerate)
+ml/models/artifacts/*.pkl
+ml/models/artifacts/*.joblib
+ml/models/artifacts/*.h5
+ml/models/artifacts/*.pt
+ml/models/artifacts/*.pth
+# Keep the directory structure
+!ml/models/artifacts/.gitkeep
+
+# Dataset large files (generated; use scripts to regenerate)
+data/raw/*.csv
+data/processed/*.csv
+data/synthetic/*.csv
+# Keep structure
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/synthetic/.gitkeep
+!data/external/.gitkeep
+!data/reports/.gitkeep
+
+# Logs
+logs/
+*.log
+backend/logs/
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# IDE
+.idea/
+.vscode/settings.json
+*.code-workspace
+
+# Docker local volumes
+pgdata/
+
+# Pytest
+.pytest_cache/
+backend/.pytest_cache/
+ml/.pytest_cache/
+.coverage
+htmlcov/
+
+# Alembic
+backend/alembic/versions/__pycache__/

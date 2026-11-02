@@ -1,0 +1,47 @@
+{
+  "model_name": "waste_risk_classifier",
+  "algorithm": "RandomForestClassifier",
+  "version": "1.0.0",
+  "classes": [
+    "LOW",
+    "MEDIUM",
+    "HIGH"
+  ],
+  "metrics": {
+    "accuracy": 0.7288,
+    "macro_f1": 0.4814,
+    "classification_report": {
+      "HIGH": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 22.0
+      },
+      "LOW": {
+        "precision": 0.7951635846372689,
+        "recall": 0.7600271923861319,
+        "f1-score": 0.7771984706291276,
+        "support": 1471.0
+      },
+      "MEDIUM": {
+        "precision": 0.6390760346487007,
+        "recall": 0.6974789915966386,
+        "f1-score": 0.6670015067805123,
+        "support": 952.0
+      },
+      "accuracy": 0.7288343558282209,
+      "macro avg": {
+        "precision": 0.4780798730953231,
+        "recall": 0.4858353946609235,
+        "f1-score": 0.48139999246987997,
+        "support": 2445.0
+      },
+      "weighted avg": {
+        "precision": 0.7272335451889511,
+        "recall": 0.7288343558282209,
+        "f1-score": 0.7272983168713678,
+        "support": 2445.0
+      }
+    }
+  }
+}
